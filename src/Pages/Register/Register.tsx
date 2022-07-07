@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from 'react';
 import { RegisterContainer, RegisterStyles } from './Register.styles';
 import Form from 'react-bootstrap/Form';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FormLabel } from 'react-bootstrap';
 import AuthenticationStyles from '../../styles/AuthenticationStyles';
 
@@ -25,6 +25,7 @@ const schema = yup.object().shape({
 });
 
 const Register = () => {
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -40,6 +41,7 @@ const Register = () => {
       .post('https://api.todo.maracanau.ifce.edu.br/auth/register', data)
       .then((res) => {
         console.log(res);
+        navigate('/');
       })
       .catch((err) => {
         console.log(err);
