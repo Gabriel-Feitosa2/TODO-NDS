@@ -1,10 +1,11 @@
+/* eslint-disable react/prop-types */
 import Card from 'react-bootstrap/Card';
 import { CardStyle } from './style';
 import { MdToc } from 'react-icons/md';
 import { BsClock } from 'react-icons/bs';
 import LongMenu from './Options/Options';
 
-const Cards = () => {
+const Cards = ({ card }) => {
   return (
     <CardStyle>
       <Card style={{ width: '18rem' }}>
@@ -13,9 +14,9 @@ const Cards = () => {
           <div className="body">
             <div className="body-text">
               <Card.Subtitle className="card-subtitle">
-                Título da Task
+                {card.name}
               </Card.Subtitle>
-              <Card.Text>Descrição da tarefa</Card.Text>
+              <Card.Text>{card.descricao}</Card.Text>
             </div>
             <LongMenu />
             <div className="barra"></div>
@@ -25,7 +26,7 @@ const Cards = () => {
               <MdToc className="tarefas-icons" /> <p>Tarefas</p>
             </div>
             <div className="data">
-              <BsClock /> <p>24 de Outubro, 10:15</p>
+              <BsClock /> <p>{card.date}</p>
             </div>
           </div>
         </Card.Body>

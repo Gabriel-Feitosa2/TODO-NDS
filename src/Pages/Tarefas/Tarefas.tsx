@@ -1,4 +1,4 @@
-import Cards from '../../components/Cards/Cards';
+import CardList from '../../components/CardList/CardList';
 import CloseSidebar from '../../components/closeSidebar';
 import Filtro from '../../components/Filtro/Filtro';
 import Header from '../../components/Header/Header';
@@ -10,7 +10,7 @@ const Tarefas = () => {
       <TarefaDashBoard className="teste">
         <Header />
         <Filtro />
-        <Cards />
+        <CardList />
         <TarefasStyles />
       </TarefaDashBoard>
       <CloseSidebar />

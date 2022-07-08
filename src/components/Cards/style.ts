@@ -1,9 +1,6 @@
 import styled from 'styled-components';
 
 export const CardStyle = styled.div`
-  position: absolute;
-  left: 21vh;
-  top: 35vh;
   .card {
     width: 18rem;
     border-radius: 15px;

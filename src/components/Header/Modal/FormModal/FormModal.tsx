@@ -1,6 +1,5 @@
 import { Col, Row } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
-import Dropdown from 'react-bootstrap/Dropdown';
 import { FormModalStyle } from './styles';
 
 const FormModal = () => {
